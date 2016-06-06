@@ -16,13 +16,15 @@ Route::get('/', function () {
 });
 
 Route::get('/blog', 'BlogsController@index');
+Route::get('/blog/{user}', 'BlogsController@userBlogs');
+
+Route::auth();
+Route::get('/users/{user}/delete', 'UsersController@delete');
 Route::get('/blog/create', 'BlogsController@create');
 Route::post('/blog/create', 'BlogsController@createPost');
-Route::get('/blog/{user}', 'BlogsController@userBlogs');
-Route::auth();
-
 Route::get('/home', 'HomeController@index');
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}/edit', 'UsersController@edit');
 Route::put('/users/{user}/save', 'UsersController@save');
-Route::get('/users/{user}/delete', 'UsersController@delete');
+
+

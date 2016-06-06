@@ -12,7 +12,12 @@
                                 {{$user->name}}
                                 <div class="pull-right">
                                     <a href="/users/{{ $user->id }}/edit" class="btn btn-warning">Edit</a>
-                                    <a href="/users/{{ $user->id }}/delete" class="btn btn-danger">Delete</a>
+                                    @if (Auth::user()->id == $user->id)
+                                        <a class="btn btn-danger" disabled>Delete</a>
+                                    @else
+                                        <a href="/users/{{ $user->id }}/delete" class="btn btn-danger">Delete</a>
+                                    @endif
+
                                 </div>
                             </li>
                         @endforeach
