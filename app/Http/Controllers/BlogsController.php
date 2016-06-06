@@ -8,6 +8,7 @@ use App\Users;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class BlogsController extends Controller
 {
@@ -22,5 +23,16 @@ class BlogsController extends Controller
     public function userBlogs(Users $user) {
         $blogUser = Users::where('id', $user->id)->firstOrFail();
         return view('blog.userblogs', ['user'=>$blogUser]);
+    }
+    public function create() {
+        return view('blog.create');
+    }
+    public function createPost(Request $request) {
+        Blogs::create([
+            'title' => $request->title,
+            'body' => $request->body,
+            'users_id' => Auth::user()->id,
+        ]);
+        return back();
     }
 }

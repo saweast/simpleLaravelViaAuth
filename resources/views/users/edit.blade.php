@@ -2,6 +2,11 @@
 
 @section('content')
     <div class="container">
+        <div class="row" style="margin-bottom: 20px;">
+            <div class="col-md-8 col-md-offset-2">
+                <a class="btn btn-warning" href="/users"><i class="fa fa-btn fa-chevron-left"></i>Back</a>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="panel panel-default">

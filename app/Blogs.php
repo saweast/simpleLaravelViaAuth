@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Blogs extends Model
 {
     protected $fillable = [
-        'title', 'user_id', 'body',
+        'title', 'users_id', 'body',
     ];
     protected function getDateFormat()
     {
