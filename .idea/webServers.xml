@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4728820a-fd85-475a-b859-6603b35f6a1c" name="vlovecomua" url="http://ftp.vlove.com.ua">
+        <fileTransfer host="ftp.vlove.com.ua" port="21" password="df98df9ddf9adf9cdf9bdf93df93df9f" username="vlovecom">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
