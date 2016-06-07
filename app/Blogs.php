@@ -15,7 +15,8 @@ class Blogs extends Model
     }
     public function user()
     {
-//        return User::where('id', $this->user_id)->first()->name;
-        return $this->belongsTo(Users::class);
+        return Users::find($this->users_id);
+//        return User::where('id', $this->users_id)->first()->name;
+//        return $this->belongsTo(Users::class);
     }
 }

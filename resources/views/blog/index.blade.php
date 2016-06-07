@@ -20,8 +20,11 @@
                     <div class="panel-body">
                         {!! $blog->body !!}
                     </div>
+                    <h1>
+
+                    </h1>
                     <div class="panel-footer clearfix">
-                        <span class="pull-right"><a href="blog/{{ $blog->users_id }}">{{ $users[($blog->users_id) -1]->name  }}</a></span>
+                        <span class="pull-right"><a href="blog/{{ $blog->users_id }}">{{ $blog->user()['name'] }} </a></span>
                     </div>
                 </div>
                 @endforeach
