@@ -20,7 +20,7 @@ Route::get('/blog', 'BlogsController@index');
 Route::get('/blog/{user}', 'BlogsController@userBlogs');
 Route::get('/blog/{blog}/edit', 'BlogsController@edit');
 Route::put('/blog/{blog}/edit', 'BlogsController@editPost');
-Route::get('/blog/create', 'BlogsController@create');
+Route::get('/createPost', 'BlogsController@make');
 Route::post('/blog/create', 'BlogsController@createPost');
 Route::get('/blog/{blog}/delete', 'BlogsController@deletePost');
 

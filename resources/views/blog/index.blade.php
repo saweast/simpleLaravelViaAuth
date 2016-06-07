@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-md-10 col-md-offset-1">
-                <a class="btn btn-success" href="/blog/create"><i class="fa fa-btn fa-check"></i>Create new post</a>
+                <a class="btn btn-success" href="/createPost"><i class="fa fa-btn fa-check"></i>Create new post</a>
             </div>
         </div>
         <div class="row">

@@ -23,9 +23,11 @@ class BlogsController extends Controller
         $blogUser = Users::where('id', $user->id)->firstOrFail();
         return view('blog.userblogs', ['user'=>$blogUser]);
     }
-    public function create() {
+    public function make() {
+//        return 123;
         return view('blog.create');
     }
+
     public function createPost(Request $request) {
         Blogs::create([
             'title' => $request->title,
