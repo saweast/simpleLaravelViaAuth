@@ -17,6 +17,9 @@ Route::get('/', function () {
 
 Route::get('/blog', 'BlogsController@index');
 Route::get('/blog/{user}', 'BlogsController@userBlogs');
+Route::get('/blog/{blog}/edit', 'BlogsController@edit');
+Route::put('/blog/{blog}/edit', 'BlogsController@editPost');
+Route::get('/blog/{blog}/delete', 'BlogsController@deletePost');
 
 Route::auth();
 Route::get('/users/{user}/delete', 'UsersController@delete');

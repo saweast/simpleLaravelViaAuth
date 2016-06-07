@@ -22,7 +22,9 @@
                             {!! $blog->body !!}
                         </div>
                         <div class="panel-footer clearfix">
-                            <span class="pull-right"><a href="blog/{{ $user->id }}"> {{ $user->name }}</a></span>
+                            <a href="/blog/{{ $blog->id }}/edit" class="btn btn-warning">Edit</a>
+                            <a href="/blog/{{ $blog->id }}/delete" class="btn btn-danger">Delete</a>
+                            <span class="pull-right"><a href="/blog/{{ $user->id }}"> {{ $user->name }}</a></span>
                         </div>
                     </div>
                 @endforeach

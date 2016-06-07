@@ -17,8 +17,7 @@ class BlogsController extends Controller
     }
     public function index() {
         $blogs = Blogs::all();
-        $users = Users::all();
-        return view('blog.index', ['blogs'=>$blogs, 'users'=>$users]);
+        return view('blog.index', ['blogs'=>$blogs]);
     }
     public function userBlogs(Users $user) {
         $blogUser = Users::where('id', $user->id)->firstOrFail();
@@ -33,6 +32,21 @@ class BlogsController extends Controller
             'body' => $request->body,
             'users_id' => Auth::user()->id,
         ]);
+        return back();
+    }
+    public function edit(Blogs $blog) {
+        return view('blog.edit', ['blog'=>$blog]);
+    }
+    public function editPost(Request $request, Blogs $blog) {
+        $blog = Blogs::find($blog->id);
+        $blog->title = $request->title;
+        $blog->body = $request->body;
+        $blog->users_id = $request->users_id;
+        $blog->save();
+        return back();
+    }
+    public function deletePost(Blogs $blog) {
+        Blogs::destroy($blog->id);
         return back();
     }
 }
