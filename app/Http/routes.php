@@ -31,4 +31,7 @@ Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}/edit', 'UsersController@edit');
 Route::put('/users/{user}/save', 'UsersController@save');
 
+Route::get('/publishes', 'PublishController@index');
+Route::get('/publishers', 'PublisherController@index');
+
 
