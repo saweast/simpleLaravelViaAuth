@@ -14,17 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::auth();
 
 Route::get('/blog', 'BlogsController@index');
 Route::get('/blog/{user}', 'BlogsController@userBlogs');
 Route::get('/blog/{blog}/edit', 'BlogsController@edit');
 Route::put('/blog/{blog}/edit', 'BlogsController@editPost');
-Route::get('/blog/{blog}/delete', 'BlogsController@deletePost');
-
-Route::auth();
-Route::get('/users/{user}/delete', 'UsersController@delete');
 Route::get('/blog/create', 'BlogsController@create');
 Route::post('/blog/create', 'BlogsController@createPost');
+Route::get('/blog/{blog}/delete', 'BlogsController@deletePost');
+
+Route::get('/users/{user}/delete', 'UsersController@delete');
+
 Route::get('/home', 'HomeController@index');
 Route::get('/users', 'UsersController@index');
 Route::get('/users/{user}/edit', 'UsersController@edit');
